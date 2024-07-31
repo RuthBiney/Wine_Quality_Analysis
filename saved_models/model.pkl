@@ -1,0 +1,7 @@
+import joblib
+
+# Save the red wine model
+joblib.dump(model_red, 'model_red.pkl')
+
+# Save the white wine model
+joblib.dump(model_white, 'model_white.pkl')

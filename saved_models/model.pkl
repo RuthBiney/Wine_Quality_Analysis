@@ -1,7 +1,7 @@
 import joblib
 
-# Save the red wine model
+# Save the models
 joblib.dump(model_red, 'model_red.pkl')
-
-# Save the white wine model
 joblib.dump(model_white, 'model_white.pkl')
+
+print("Models have been saved as 'model_red.pkl' and 'model_white.pkl'")

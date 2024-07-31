@@ -28,4 +28,4 @@ def predict():
     return jsonify({'prediction': int(prediction[0])})
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)

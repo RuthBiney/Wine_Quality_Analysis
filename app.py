@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 import joblib
 import numpy as np
 
@@ -10,7 +10,7 @@ model_white = joblib.load('model_white.pkl')
 
 @app.route('/')
 def home():
-    return "Wine Quality Prediction API"
+    return render_template('index.html')
 
 @app.route('/predict', methods=['POST'])
 def predict():
@@ -28,4 +28,4 @@ def predict():
     return jsonify({'prediction': int(prediction[0])})
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
